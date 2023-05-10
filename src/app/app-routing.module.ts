@@ -30,6 +30,7 @@ const routes: Routes = [
     pathMatch:'full'
 
   },
+  { path: 'material', loadChildren: () => import('./modules/material/material.module').then(m => m.MaterialModule) },
 
   {
     //cuando sea cualquier cosa que no haga match con nada que haga un redireccion a la pagina 404
