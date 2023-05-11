@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutPageComponent, LoginPageComponent, RegisterPageComponent } from './pages';
 
-const routes: Routes = [];
+const routes: Routes = [
+ {
+  path:'',
+  component:LayoutPageComponent,
+  children:[
+    {
+      path:'login',
+      component:LoginPageComponent
+    },
+    {
+      path:'new-account',
+      component:RegisterPageComponent
+    },
+    {
+      path:'**',
+      redirectTo:'login'
+    }
+  ]
+
+ }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
