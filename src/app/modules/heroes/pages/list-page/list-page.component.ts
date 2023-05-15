@@ -1,8 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, inject,Input,OnInit } from '@angular/core';
+import { HeroesService } from './../../services/heroes.service';
+import { Hero } from '../../models/hero.models';
 
 @Component({
-  templateUrl: './list-page.component.html'
+  selector:'app-list-page',
+  templateUrl: './list-page.component.html',
+
+
+
 })
-export class ListPageComponent {
+export class ListPageComponent implements  OnInit{
+
+
+  public heroes: Hero[]=[];
+
+  private HeroesService=inject(HeroesService);
+
+
+
+ngOnInit(): void {
+    this.HeroesService.getHeroes().subscribe((heroes)=> this.heroes=heroes);
+}
+
 
 }
