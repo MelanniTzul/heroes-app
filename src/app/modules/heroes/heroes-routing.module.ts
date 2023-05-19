@@ -1,7 +1,6 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroPageComponent, LayoutPageComponent, ListPageComponent, NewPageComponent, SearchPageComponent } from './pages';
-import { CardComponent } from './components';
 
 const routes: Routes = [
   {

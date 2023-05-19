@@ -1,8 +1,5 @@
-import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthModule } from './modules/auth/auth.module';
-import { HeroesModule } from './modules/heroes/heroes.module';
 
 /*Ruta principal donde esta mi dominio principal dominio.com */
 const routes: Routes = [
@@ -43,7 +40,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {bindToComponentInputs: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

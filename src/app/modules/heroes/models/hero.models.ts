@@ -7,6 +7,7 @@ export interface Hero {
   alt_img?:string;
   publisher:Publisher;
 
+
 }
 
 export enum Publisher{

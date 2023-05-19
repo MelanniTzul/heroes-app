@@ -1,5 +1,5 @@
 <mat-sidenav-container fullscreen>
-  <mat-sidenav #sidenav mode="push" [ngStyle]="{ witdh: '250px' }">
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
     <mat-toolbar>
       <span>Menu</span>
       <span class="spacer"></span>
@@ -8,11 +8,8 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <mat-list-item
-        *ngFor="let item of sidebarItems"
-        [routerLink]="item.url"
-        (click)="sidenav.toggle()"
-      >
+      <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
         {{item.label}}
       </mat-list-item>
     </mat-nav-list>
@@ -27,6 +24,6 @@
     </button>
   </mat-toolbar>
   <div class="container p-2">
-    <router-outlet/>
+    <router-outlet />
   </div>
 </mat-sidenav-container>

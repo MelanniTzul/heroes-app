@@ -9,6 +9,10 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '@modules/material';
 import { CardComponent } from "./components/card/card.component";
+import { RouterModule } from '@angular/router';
+import { HeroImagePipe } from './pipes/hero-image.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -19,13 +23,17 @@ import { CardComponent } from "./components/card/card.component";
         HeroPageComponent,
         ListPageComponent,
         NewPageComponent,
-        SearchPageComponent
+        CardComponent,
+        SearchPageComponent,
+        HeroImagePipe,
+        ConfirmDialogComponent
     ],
     imports: [
         CommonModule,
+        RouterModule,
         HeroesRoutingModule,
         MaterialModule,
-        CardComponent
+        ReactiveFormsModule
     ]
 })
 export class HeroesModule { }

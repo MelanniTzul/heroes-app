@@ -161,11 +161,12 @@
     },
     {
       "id": "marvel-silver",
-      "superhero": "Silver Surfer",
+      "superhero": "Silver ",
       "publisher": "Marvel Comics",
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
-      "characters": "Norrin Radd"
+      "characters": "Norrin Radd",
+      "alt_img": null
     }
   ]
 }

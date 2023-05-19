@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SidebarMenu } from '@modules/heroes/models/sidebar-menu.model';
 
 @Component({
+  selector:'app-layout-page',
   templateUrl: './layout-page.component.html'
 })
 export class LayoutPageComponent {

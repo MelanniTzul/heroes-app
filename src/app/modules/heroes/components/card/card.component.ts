@@ -1,22 +1,22 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MatCardModule} from '@angular/material/card';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '@modules/heroes/models';
 
 @Component({
   selector: 'app-card',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule
-  ],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent {
+export class CardComponent  implements OnInit{
 
-  //Poder mandar el dato
-  @Input() heroe!: Hero;
+   //Poder mandar el dato
+   @Input() public heroe!: Hero;
+
+  ngOnInit(): void {
+    //*validar error
+    if(!this.heroe)throw Error('Hero property es required');
+
+  }
+
 
 
 
