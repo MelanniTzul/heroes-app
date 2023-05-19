@@ -48,7 +48,7 @@ export class HeroesService {
 
   //*ELIMINAMOS
   deleteHero(id:string):Observable<boolean>{
-    return this.http.delete(`${ this.baseUrl }/heroes/$ {id}`)
+    return this.http.delete<boolean>(`${ this.baseUrl }/heroes/$ {id}`)
     .pipe(
       catchError((error)=> of (false)),
       map(resp=>true)
